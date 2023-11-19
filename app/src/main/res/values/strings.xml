@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Account Management app</string>
+    <string-array name="spinner_items">
+        <item>-->Select admission type </item>
+        <item>-->CAP-CET</item>
+        <item>-->Management</item>
+        <item>-->Quota</item>
+        <!-- Add more items as needed -->
+    </string-array>
+    <string-array name="spinner2_items">
+        <item>-->Category</item>
+        <item>-->OPEN</item>
+        <item>-->SC</item>
+        <item>-->Scholarship</item>
+        <!-- Add more items as needed -->
+    </string-array>
+
+    <string-array name="spinner3_items">
+        <item>-->Others</item>
+        <item>-->Late fees</item>
+        <item>-->Insurance</item>
+        <item>-->Miscellaneous</item>
+
+        <!-- Add more items as needed -->
+    </string-array>
+    <string-array name="spinner4_items">
+
+        <item>-->Extras</item>
+        <item>-->Uniform</item>
+        <item>-->I-card</item>
+
+
+        <!-- Add more items as needed -->
+    </string-array>
+</resources>
