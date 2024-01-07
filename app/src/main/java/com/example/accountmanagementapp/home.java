@@ -6,18 +6,28 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import android.widget.Toast;
+
+
 import androidx.appcompat.app.AppCompatActivity;
 
 public class home extends AppCompatActivity {
+
+    SessionManager sessionManager;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        sessionManager = new SessionManager(getApplicationContext());
+
         // Find buttons by their IDs
         Button btnDetails = findViewById(R.id.btn_details);
         Button btnFees = findViewById(R.id.btn_fees);
+
+        Button logout = findViewById(R.id.logout);
         Button btnsearch = findViewById(R.id.btn_search);
         @SuppressLint({"MissingInflatedId", "LocalSuppress"}) Button btnadmission = findViewById(R.id.btn_admission);
         @SuppressLint({"MissingInflatedId", "LocalSuppress"}) Button btnparent = findViewById(R.id.btn_parent);
@@ -67,5 +77,30 @@ public class home extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+      logout.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            logout();
+        }
+    });
+}
+
+    // Function to handle logout
+    private void logout() {
+        // Clear any session data or user preferences
+        sessionManager.logoutUser();
+
+        // Redirect to the login activity
+        Intent intent = new Intent(home.this, login.class);
+        startActivity(intent);
+        finish(); // Close the current activity
+
+        // Display a success message using a Toast
+        Toast.makeText(home.this, "Logout successful", Toast.LENGTH_SHORT).show();
     }
 }
+
+
+
+
