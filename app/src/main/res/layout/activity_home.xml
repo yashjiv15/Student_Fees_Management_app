@@ -11,6 +11,21 @@
     android:background="@drawable/purple"
     tools:context=".login">
 
+
+
+    <Button
+        android:id="@+id/logout"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="0dp"
+        android:backgroundTint="@color/white"
+        android:drawableTop="@drawable/baseline_logout_24"
+        app:cornerRadius="0dp"
+
+
+        />
+
     <androidx.cardview.widget.CardView
         android:layout_width="350dp"
         android:layout_height="600dp"
@@ -27,9 +42,12 @@
 
 
 
+
+
             <TextView
                 android:id="@+id/loginText"
-                android:layout_width="match_parent"
+                android:layout_width="296dp"
+
                 android:layout_height="wrap_content"
                 android:layout_marginTop="0dp"
                 android:text="Student Profile"
